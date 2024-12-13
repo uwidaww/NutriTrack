@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".account">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/background_sayur"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp">
+
+        <ImageButton
+            android:id="@+id/buttonBackAkun"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:backgroundTint="#00ffffff"
+            android:src="@drawable/back"/>
+
+        <TextView
+            android:id="@+id/judul"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="90dp"
+            android:fontFamily="@font/jost_medium"
+            android:text="Data Profil"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="411dp"
+            android:layout_height="644dp"
+            android:layout_gravity="center_horizontal|center_vertical|bottom"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/profile_bg"
+            android:elevation="10dp"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <ImageView
+                android:id="@+id/profileAccount"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/avatar" />
+
+            <TextView
+                android:id="@+id/namaPenggunaProfil"
+                android:layout_width="246dp"
+                android:layout_height="37dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginHorizontal="30dp"
+                android:fontFamily="@font/jost_medium"
+                android:gravity="center_vertical"
+                android:text="Nama Pengguna"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/usernameColProfil"
+                android:layout_width="330dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/input_bg"
+                android:drawableLeft="@drawable/profile"
+                android:drawablePadding="10dp"
+                android:ems="10"
+                android:fontFamily="@font/jost"
+                android:hint="Nama Pengguna"
+                android:inputType="text"
+                android:paddingStart="20dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/namaLengkapProfil"
+                android:layout_width="246dp"
+                android:layout_height="37dp"
+                android:layout_marginHorizontal="30dp"
+                android:fontFamily="@font/jost_medium"
+                android:gravity="center_vertical"
+                android:text="Nama Lengkap"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/namaLengkapColProfil"
+                android:layout_width="330dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/input_bg"
+                android:drawableLeft="@drawable/profile"
+                android:drawablePadding="10dp"
+                android:ems="10"
+                android:fontFamily="@font/jost"
+                android:hint="Nama Lengkap"
+                android:inputType="text"
+                android:paddingStart="20dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tanggalLahirProfil"
+                android:layout_width="246dp"
+                android:layout_height="37dp"
+                android:layout_marginHorizontal="30dp"
+                android:fontFamily="@font/jost_medium"
+                android:gravity="center_vertical"
+                android:text="Tanggal Lahir"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/colTglLahirProfil"
+                android:layout_width="330dp"
+                android:layout_height="50dp"
+                android:layout_marginBottom="20dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/input_bg"
+                android:drawableLeft="@drawable/kalender_hitam"
+                android:drawablePadding="10dp"
+                android:ems="10"
+                android:fontFamily="@font/jost"
+                android:hint="Tanggal Lahir"
+                android:inputType="text"
+                android:paddingStart="20dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/buttonUbahProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_margin="30dp"
+                android:fontFamily="@font/jost_medium"
+                android:text="Ubah Profil"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="50dp"/>
+
+        </LinearLayout>
+</FrameLayout>

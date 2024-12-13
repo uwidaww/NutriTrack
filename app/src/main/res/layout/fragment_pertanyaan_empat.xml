@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".pertanyaanEmpat">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="20dp">
+
+                <ImageButton
+                    android:id="@+id/buttonBackEmpat"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:backgroundTint="@color/white"
+                    android:src="@drawable/back"/>
+
+                <TextView
+                    android:id="@+id/judul"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="20dp"
+                    android:fontFamily="@font/jost_medium"
+                    android:text="Asupan Makanan dan Kalori"
+                    android:textColor="#000000"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="25dp"
+                android:layout_weight="1"
+                android:indeterminate="false"
+                android:progress="100"
+                android:progressTint="@color/purple"/>
+
+            <TextView
+                android:id="@+id/makan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/jost_medium"
+                android:layout_marginHorizontal="20dp"
+                android:text="Berapa kali Anda makan dalam sehari?"
+                android:textSize="20sp"/>
+
+            <RadioGroup
+                android:id="@+id/rbGroupMakan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp">
+
+                <RadioButton
+                    android:id="@+id/rbKurang"
+                    android:fontFamily="@font/jost_medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1-2 kali"
+                    android:textSize="16sp"/>
+
+                <RadioButton
+                    android:id="@+id/rbCukup"
+                    android:fontFamily="@font/jost_medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3 kali"
+                    android:textSize="16sp"/>
+                <RadioButton
+                    android:id="@+id/rbLebih"
+                    android:fontFamily="@font/jost_medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lebih dari 3 kali"
+                    android:textSize="16sp"/>
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/jenisMakanan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/jost_medium"
+                android:layout_marginHorizontal="20dp"
+                android:text="Apa jenis makanan yang sering Anda konsumsi?"
+                android:textSize="20sp"/>
+
+            <CheckBox
+                android:id="@+id/cbKarbo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="Tinggi Karbohidrat"
+                android:fontFamily="@font/jost_medium"
+                android:textSize="16sp" />
+
+            <CheckBox
+                android:id="@+id/cbProtein"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="Tinggi Protein"
+                android:fontFamily="@font/jost_medium"
+                android:textSize="16sp" />
+
+            <CheckBox
+                android:id="@+id/cbLemak"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="Rendah Lemak"
+                android:fontFamily="@font/jost_medium"
+                android:textSize="16sp" />
+
+            <CheckBox
+                android:id="@+id/cbSeimbang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="Seimbang"
+                android:fontFamily="@font/jost_medium"
+                android:textSize="16sp" />
+
+
+            <TextView
+                android:id="@+id/konsumsi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/jost_medium"
+                android:layout_marginHorizontal="20dp"
+                android:text="Apakah Anda sering mengonsumsi makanan cepat saji atau olahan?"
+                android:textSize="20sp"/>
+
+            <RadioGroup
+                android:id="@+id/rbInstan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp">
+
+                <RadioButton
+                    android:id="@+id/rbYaKonsum"
+                    android:fontFamily="@font/jost_medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ya"
+                    android:textSize="16sp"/>
+
+                <RadioButton
+                    android:id="@+id/rbTidakKonsum"
+                    android:fontFamily="@font/jost_medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tidak"
+                    android:textSize="16sp"/>
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/camilan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/jost_medium"
+                android:layout_marginHorizontal="20dp"
+                android:text="Berapa banyak camilan yang Anda konsumsi dalam sehari?"
+                android:textSize="20sp"/>
+
+            <RadioGroup
+                android:id="@+id/rbNyemil"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp">
+
+                <RadioButton
+                    android:id="@+id/rbTidakAda"
+                    android:fontFamily="@font/jost_medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tidak Ada"
+                    android:textSize="16sp"/>
+
+                <RadioButton
+                    android:id="@+id/rbNyemilSekali"
+                    android:fontFamily="@font/jost_medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1-2 cemilan"
+                    android:textSize="16sp"/>
+                <RadioButton
+                    android:id="@+id/rbNyemilLebih"
+                    android:fontFamily="@font/jost_medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lebih dari 2 cemilan"
+                    android:textSize="16sp"/>
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/buttonSelesaiPertanyaan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="30dp"
+                android:fontFamily="@font/jost_medium"
+                android:text="Selesai" />
+
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

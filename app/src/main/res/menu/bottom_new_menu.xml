@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/home"
+        android:title="Beranda" />
+    <item
+        android:id="@+id/navResep"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/resep"
+        android:title="Resep" />
+    <item
+        android:id="@+id/navAlarm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/alarm"
+        android:title="Pengingat" />
+    <item
+        android:id="@+id/navPengaturan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/pengaturan"
+        android:title="Pengaturan" />
+</menu>

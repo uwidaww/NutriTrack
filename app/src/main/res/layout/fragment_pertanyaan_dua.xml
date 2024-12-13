@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".pertanyaanDua">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="20dp">
+
+                <ImageButton
+                    android:id="@+id/buttonBackDua"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:backgroundTint="@color/white"
+                    android:src="@drawable/back"/>
+
+                <TextView
+                    android:id="@+id/judul"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="80dp"
+                    android:fontFamily="@font/jost_medium"
+                    android:text="Konsumsi Air"
+                    android:textColor="#000000"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="25dp"
+                android:layout_weight="1"
+                android:indeterminate="false"
+                android:progress="50"
+                android:progressTint="@color/purple"/>
+
+            <TextView
+                android:id="@+id/minum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/jost_medium"
+                android:layout_marginHorizontal="20dp"
+                android:text="Berapa banyak air yang Anda minum per hari?"
+                android:textSize="20sp"/>
+
+            <RadioGroup
+                android:id="@+id/rbGroupBanyakMinum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp">
+
+                <RadioButton
+                    android:id="@+id/rbKurang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/jost_medium"
+                    android:text="Kurang dari 500ml"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/rbCukup"
+                    android:fontFamily="@font/jost_medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="500ml sampai 1000ml"
+                    android:textSize="16sp"/>
+                <RadioButton
+                    android:id="@+id/rbLebih"
+                    android:fontFamily="@font/jost_medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lebih dari 1000ml"
+                    android:textSize="16sp"/>
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/sulitMinum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/jost_medium"
+                android:layout_marginHorizontal="20dp"
+                android:text="Apakah Anda kesulitan minum cukup air setiap hari?"
+                android:textSize="20sp"/>
+
+            <RadioGroup
+                android:id="@+id/rbGroupSulitMinum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp">
+
+                <RadioButton
+                    android:id="@+id/rbYaSulit"
+                    android:fontFamily="@font/jost_medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ya"
+                    android:textSize="16sp"/>
+
+                <RadioButton
+                    android:id="@+id/rbTidakSulit"
+                    android:fontFamily="@font/jost_medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tidak"
+                    android:textSize="16sp"/>
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/reminderMinum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/jost_medium"
+                android:layout_marginHorizontal="20dp"
+                android:text="Apakah Anda menggunakan pengingat untuk minum air?"
+                android:textSize="20sp"/>
+
+            <RadioGroup
+                android:id="@+id/rbGroupReminderMinum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp">
+
+                <RadioButton
+                    android:id="@+id/rbYaReminder"
+                    android:fontFamily="@font/jost_medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ya"
+                    android:textSize="16sp"/>
+
+                <RadioButton
+                    android:id="@+id/rbTidakReminder"
+                    android:fontFamily="@font/jost_medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tidak"
+                    android:textSize="16sp"/>
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/buttonNextPertanyaanDua"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="30dp"
+                android:fontFamily="@font/jost_medium"
+                android:text="Selanjutnya" />
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>

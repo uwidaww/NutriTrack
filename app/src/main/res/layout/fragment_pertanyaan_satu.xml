@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".pertanyaanSatu">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="20dp">
+
+                <ImageButton
+                    android:id="@+id/buttonBackSatu"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:backgroundTint="@color/white"
+                    android:src="@drawable/back"/>
+
+                <TextView
+                    android:id="@+id/judul"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="50dp"
+                    android:fontFamily="@font/jost_medium"
+                    android:text="Informasi Data Diri"
+                    android:textColor="#000000"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="25dp"
+                android:layout_weight="1"
+                android:indeterminate="false"
+                android:progress="25"
+                android:progressTint="@color/purple"/>
+
+            <TextView
+                android:id="@+id/namaPenggunaProfil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/jost_medium"
+                android:layout_marginHorizontal="20dp"
+                android:text="Nama Lengkap"
+                android:textSize="20sp"/>
+
+            <EditText
+                android:id="@+id/namaCol"
+                android:layout_width="370dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/daftar_bg"
+                android:drawablePadding="10dp"
+                android:ems="10"
+                android:fontFamily="@font/jost"
+                android:inputType="text"
+                android:paddingStart="20dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:textSize="20sp"/>
+
+                <TextView
+                    android:id="@+id/tanggalLahir"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:fontFamily="@font/jost_medium"
+                    android:text="Tanggal Lahir"
+                    android:textSize="20sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingStart="20dp"
+                    android:layout_marginBottom="20dp">
+
+                    <EditText
+                        android:id="@+id/tanggalCol"
+                        android:layout_width="300dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/daftar_bg"
+                        android:drawablePadding="10dp"
+                        android:ems="10"
+                        android:fontFamily="@font/jost"
+                        android:inputType="text"
+                        android:paddingStart="20dp"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:textAlignment="gravity"
+                        android:textSize="20sp"
+                        tools:ignore="MissingConstraints" />
+
+                    <ImageButton
+                        android:id="@+id/imageButton"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="20dp"
+                        android:background="@drawable/calendar"
+                        android:onClick="fSetTanggal"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/gender"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/jost_medium"
+                    android:layout_marginHorizontal="20dp"
+                    android:text="Jenis Kelamin"
+                    android:textSize="20sp"/>
+
+                <RadioGroup
+                    android:id="@+id/rbGroupGender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp">
+
+                    <RadioButton
+                        android:id="@+id/rbPerempuan"
+                        android:fontFamily="@font/jost_medium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Perempuan"
+                        android:textSize="16sp"/>
+
+                    <RadioButton
+                        android:id="@+id/rbLaki"
+                        android:fontFamily="@font/jost_medium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Laki-laki"
+                        android:layout_marginBottom="20dp"
+                        android:textSize="16sp"/>
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/tinggi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/jost_medium"
+                    android:layout_marginHorizontal="20dp"
+                    android:text="Tinggi Badan (cm)"
+                    android:textSize="20sp"/>
+
+                <EditText
+                    android:id="@+id/tbCol"
+                    android:layout_width="370dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/daftar_bg"
+                    android:drawablePadding="10dp"
+                    android:ems="10"
+                    android:fontFamily="@font/jost"
+                    android:inputType="number"
+                    android:paddingStart="20dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:textSize="20sp"/>
+
+                <TextView
+                    android:id="@+id/berat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/jost_medium"
+                    android:layout_marginHorizontal="20dp"
+                    android:text="Berat Badan Saat Ini (Kg)"
+                    android:textSize="20sp"/>
+
+                <EditText
+                    android:id="@+id/bbCol"
+                    android:layout_width="370dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/daftar_bg"
+                    android:drawablePadding="10dp"
+                    android:ems="10"
+                    android:fontFamily="@font/jost"
+                    android:inputType="number"
+                    android:paddingStart="20dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/goal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/jost_medium"
+                    android:layout_marginHorizontal="20dp"
+                    android:text="Apa tujuan Anda?"
+                    android:textSize="20sp"/>
+
+                <RadioGroup
+                    android:id="@+id/rbGroupTujuan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp">
+
+                    <RadioButton
+                        android:id="@+id/rbTurun"
+                        android:fontFamily="@font/jost_medium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Menurunkan berat badan"
+                        android:textSize="16sp"/>
+
+                    <RadioButton
+                        android:id="@+id/rbMenjaga"
+                        android:fontFamily="@font/jost_medium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Menjaga berat badan"
+                        android:textSize="16sp"/>
+
+                    <RadioButton
+                        android:id="@+id/rbNaik"
+                        android:fontFamily="@font/jost_medium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Menaikkan berat badan"
+                        android:textSize="16sp"/>
+                </RadioGroup>
+
+                <Button
+                    android:id="@+id/buttonNextPertanyaanSatu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="30dp"
+                    android:fontFamily="@font/jost_medium"
+                    android:text="Selanjutnya" />
+    </LinearLayout>
+    </ScrollView>
+</FrameLayout>

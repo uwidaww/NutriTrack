@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".pertanyaanTiga">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="20dp">
+
+                <ImageButton
+                    android:id="@+id/buttonBackTiga"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:backgroundTint="@color/white"
+                    android:src="@drawable/back"/>
+
+                <TextView
+                    android:id="@+id/judul"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="65dp"
+                    android:fontFamily="@font/jost_medium"
+                    android:text="Aktivitas Harian"
+                    android:textColor="#000000"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="25dp"
+                android:layout_weight="1"
+                android:indeterminate="false"
+                android:progress="75"
+                android:progressTint="@color/purple"/>
+
+            <TextView
+                android:id="@+id/minum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/jost_medium"
+                android:layout_marginHorizontal="20dp"
+                android:text="Seberapa aktif Anda setiap hari?"
+                android:textSize="20sp"/>
+
+            <RadioGroup
+                android:id="@+id/rbAktifOlahraga"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp">
+
+                <RadioButton
+                    android:id="@+id/rbKurang"
+                    android:fontFamily="@font/jost_medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tidak aktif (kurang dari 2.000 langkah)"
+                    android:textSize="16sp"/>
+
+                <RadioButton
+                    android:id="@+id/rbCukup"
+                    android:fontFamily="@font/jost_medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cukup aktif (2.000–5.000 langkah)"
+                    android:textSize="16sp"/>
+                <RadioButton
+                    android:id="@+id/rbLebih"
+                    android:fontFamily="@font/jost_medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sangat aktif (lebih dari 5.000 langkah)"
+                    android:textSize="16sp"/>
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/sulitMinum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/jost_medium"
+                android:layout_marginHorizontal="20dp"
+                android:text="Berapa kali Anda berolahraga dalam seminggu?"
+                android:textSize="20sp"/>
+
+            <RadioGroup
+                android:id="@+id/rbWaktuOlahraga"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp">
+
+                <RadioButton
+                    android:id="@+id/rbTidakPernah"
+                    android:fontFamily="@font/jost_medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tidak Pernah"
+                    android:textSize="16sp"/>
+
+                <RadioButton
+                    android:id="@+id/rbSekali"
+                    android:fontFamily="@font/jost_medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1-2 kali"
+                    android:textSize="16sp"/>
+
+                <RadioButton
+                    android:id="@+id/rbTigakali"
+                    android:fontFamily="@font/jost_medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3-4 kali"
+                    android:textSize="16sp"/>
+
+                <RadioButton
+                    android:id="@+id/rbLimakali"
+                    android:fontFamily="@font/jost_medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5 kali atau lebih"
+                    android:textSize="16sp"/>
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/reminderMinum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/jost_medium"
+                android:layout_marginHorizontal="20dp"
+                android:text="Jenis olahraga apa yang Anda lakukan?"
+                android:textSize="20sp"/>
+
+            <Spinner
+                android:id="@+id/jenisOlahraga"
+                android:layout_width="370dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:paddingStart="10dp"
+                android:background="@drawable/spinner_outline"
+                android:spinnerMode="dropdown" />
+
+            <TextView
+                android:id="@+id/durasi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/jost_medium"
+                android:layout_marginHorizontal="20dp"
+                android:text="Durasi rata-rata olahraga Anda per sesi (dalam menit):"
+                android:textSize="20sp"/>
+
+            <RadioGroup
+                android:id="@+id/rbDurasiOlahraga"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp">
+
+                <RadioButton
+                    android:id="@+id/rbKurangDurasi"
+                    android:fontFamily="@font/jost_medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Kurang dari 30 menit"
+                    android:textSize="16sp"/>
+
+                <RadioButton
+                    android:id="@+id/rbCukupDurasi"
+                    android:fontFamily="@font/jost_medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="30–60 menit"
+                    android:textSize="16sp"/>
+                <RadioButton
+                    android:id="@+id/rbLebihDurasi"
+                    android:fontFamily="@font/jost_medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lebih dari 60 menit"
+                    android:textSize="16sp"/>
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/bekerja"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/jost_medium"
+                android:text="Apakah Anda bekerja di posisi yang membutuhkan aktivitas fisik tinggi?"
+                android:textSize="20sp" />
+
+            <RadioGroup
+                android:id="@+id/rbAktivitasOlahraga"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp">
+
+                <RadioButton
+                    android:id="@+id/rbYaSulit"
+                    android:fontFamily="@font/jost_medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ya"
+                    android:textSize="16sp"/>
+
+                <RadioButton
+                    android:id="@+id/rbTidakSulit"
+                    android:fontFamily="@font/jost_medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tidak"
+                    android:textSize="16sp"/>
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/buttonNextPertanyaanTiga"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="30dp"
+                android:fontFamily="@font/jost_medium"
+                android:text="Selanjutnya" />
+
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

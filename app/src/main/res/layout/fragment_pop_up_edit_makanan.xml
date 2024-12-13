@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".popUpEditMakanan">
+
+    <LinearLayout
+        android:id="@+id/popUpEditMakanan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/profile_bg"
+        android:elevation="10dp"
+        android:orientation="vertical"
+        android:padding="15dp"
+        android:layout_gravity="bottom">
+
+        <RelativeLayout
+            android:id="@+id/gantiMakanan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="onChangeFoodClicked">
+
+            <ImageView
+                android:id="@+id/security"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/replace_black" />
+
+            <TextView
+                android:id="@+id/changePass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="60dp"
+                android:text="Ganti Makanan"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="319dp"
+            android:layout_height="1dp"
+            android:background="@color/grey"
+            android:layout_gravity="center" />
+
+        <RelativeLayout
+            android:id="@+id/hapusMakanan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="onDeleteFoodClicked">
+
+            <ImageView
+                android:id="@+id/logout"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/delete" />
+
+            <TextView
+                android:id="@+id/keluar_aplikasi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="60dp"
+                android:text="Hapus Makanan"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</FrameLayout>

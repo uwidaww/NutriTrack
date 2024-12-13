@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">TUBES</string>
+    <string name="Regis">Belum punya akun?</string>
+    <string name="Login">Sudah punya akun?</string>
+    <string name="Intro1">Mari Atur Rencana Anda</string>
+    <string name="Intro2">Anda dapat mengatur rencana yang dipersonalisasikan untuk Anda dengan NutriTrack. NutriTrack memerlukan data tertentu tentang kesehatan Anda sebagai refrensi.</string>
+    <string name="motivasi">Nutrisi yang sehat adalah kunci kesejahteraan, energi, dan umur panjang Anda</string>
+    <string name="hasil">Untuk menurunkan berat badan kamu, NutriTrack menyarankan kamu untuk setiap hari \n Konsumsi 1,400 kalori \n Membakar 1,600 kalori \nKonsumsi air 2 liter</string>
+    <string name="back_proses">Untuk mengatur ulang program, kamu bisa kembali atau mengatur ulang nanti di profil kamu</string>
+
+    <string-array name="olahraga_array">
+        <item>Jenis Olahraga</item>
+        <item>Sepak Bola</item>
+        <item>Bola Basket</item>
+        <item>Renang</item>
+        <item>Bulu Tangkis</item>
+        <item>Tenis</item>
+        <item>Bola Voli</item>
+        <item>Bersepeda</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+</resources>
