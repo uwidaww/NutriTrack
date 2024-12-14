@@ -1,26 +1,34 @@
 package com.example.tubes
 
 import android.os.Bundle
-import android.view.View
+import android.view.*
+import android.view.LayoutInflater
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import kotlin.collections.ArrayList
+import com.example.tubes.dataClassRv
 
 class MainActivity : AppCompatActivity() {
+
     private lateinit var bottomNavigationView: BottomNavigationView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
 
+
         setContentView(R.layout.activity_main)
+
         bottomNavigationView = findViewById(R.id.bottomNavigation)
 
         // Load the SignIn fragment first
-        loadFragment(signIn())
+        loadFragment(resepFragment())
 
         // Set up the bottom navigation listener
         bottomNavigationView.setOnItemSelectedListener { item ->
@@ -30,7 +38,7 @@ class MainActivity : AppCompatActivity() {
                     true
                 }
                 R.id.navResep -> {
-                    loadFragment(berandaFragment())
+                    loadFragment(resepFragment())
                     true
                 }
                 R.id.navAlarm -> {
@@ -45,12 +53,17 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
     }
+
+
+
 
     fun loadFragment(fragment: Fragment) {
         supportFragmentManager.beginTransaction().replace(R.id.frameLayout, fragment).commit()

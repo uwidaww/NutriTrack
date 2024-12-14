@@ -1,87 +1,259 @@
-<ScrollView
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp">
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".detailResep">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        <!-- Gambar Resep -->
-        <ImageView
-            android:id="@+id/imgDetailResep"
+        android:layout_height="match_parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/bubur_ayam" />
+            android:layout_height="wrap_content">
 
-        <!-- Judul Resep -->
-        <TextView
-            android:id="@+id/txtJudulResep"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="Bubur Ayam"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+            <ImageView
+                android:id="@+id/imageList"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/bubur"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                tools:ignore="MissingConstraints" />
 
-        <!-- Informasi Kalori -->
-        <TextView
-            android:id="@+id/txtKaloriDetail"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="350 kkal"
-            android:textSize="18sp"
-            android:textColor="@color/purple_500" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                tools:ignore="MissingConstraints">
 
-        <!-- Deskripsi Bahan -->
-        <TextView
-            android:id="@+id/txtBahan"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="Bahan-bahan:"
-            android:textSize="16sp"
-            android:textStyle="bold" />
+                <ImageButton
+                    android:id="@+id/buttonBackSatu"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:backgroundTint="#00ffffff"
+                    android:src="@drawable/back" />
 
-        <TextView
-            android:id="@+id/txtDetailBahan"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="1. 1/2 kg beras (cuci hingga bersih)\n2. 2 Gelas kaldu ayam
-\n3. 2 gelas air biasa
-\n4. Garam (secukupnya)
-\n5. 1/4 daging ayam (tanpa tulang)
-\n6. Bawang goreng (secukupnya)
-\n7. Kecap asin atau manis (secukupnya)
-\n8. 1 batang daun bawang (iris kecil)
-\n9. 1 batang daun seledri (iris kecil)
-\n10. 1 butir telur (rebus, kupas kulitnya belah jadi dua)
-\n11. Kaldu ayam bubuk (jika suka, secukupnya)
-\n12. Sambal (bila suka)" />
+<!--                <TextView-->
+<!--                    android:id="@+id/judul"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:layout_marginStart="80dp"-->
+<!--                    android:fontFamily="@font/jost_medium"-->
+<!--                    android:text="Bubur Ayam"-->
+<!--                    android:textColor="#000000"-->
+<!--                    android:textSize="20sp" />-->
 
-        <!-- Deskripsi Cara Memasak -->
-        <TextView
-            android:id="@+id/txtCaraMemasak"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="Cara membuat:"
-            android:textSize="16sp"
-            android:textStyle="bold" />
+            </LinearLayout>
 
-        <TextView
-            android:id="@+id/txtDetailCaraMemasak"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="1. Masak beras dengan air biasa dan air kaldu ayam. Beri garam dan kaldu ayam secukupnya.
-\n2. Masak beras hingga menjadi lumar dan lembut sampai matang kira-kira selama setengah jam. Agar panci buat memasak tidak gosong, jangan lupa untuk mengaduk beras. Jika sudah matang, sisihkan sebentar.
-\n3. Selanjutnya, bumbui daging ayam dengan garam lalu goreng sampai matang dan iris tipis.
-\n4. Ambil mangkok lalu letakkan bubur ayam di atasnya. Taburkan daging ayam goreng, bawang goreng, daun bawang, daun seledri dan telur.
-\n5. Tambahkan kecap asin atau kecap manis di atasnya. Tambahkan pula sambal jika kamu suka." />
-    </LinearLayout>
-</ScrollView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/kolom_detail"
+                app:cardCornerRadius="30dp"
+                app:layout_editor_absoluteY="245dp"
+                tools:ignore="MissingConstraints">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/kolom_detail"
+
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteY="245dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.5">
+
+                    <TextView
+                        android:id="@+id/detailTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="Bubur Ayam"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="20dp"
+                        android:layout_marginStart="20dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/protein"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="10dp"
+                                android:fontFamily="@font/jost_medium"
+                                android:text="Protein"
+                                android:textColor="@color/black"
+                                android:textSize="14dp" />
+
+                            <TextView
+                                android:id="@+id/proteinGram"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="10dp"
+                                android:fontFamily="@font/jost_medium"
+                                android:paddingBottom="5dp"
+                                android:text="kalori"
+                                android:textColor="@color/grey"
+                                android:textSize="14dp"
+                                tools:ignore="TextSizeCheck" />
+
+                            <ProgressBar
+                                android:id="@+id/progressBar3"
+                                style="?android:attr/progressBarStyleHorizontal"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/karbo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="10dp"
+                                android:fontFamily="@font/jost_medium"
+                                android:text="Karbo"
+                                android:textColor="@color/black"
+                                android:textSize="14dp" />
+
+                            <TextView
+                                android:id="@+id/karboGram"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="10dp"
+                                android:fontFamily="@font/jost_medium"
+                                android:paddingBottom="5dp"
+                                android:text="kalori"
+                                android:textColor="@color/grey"
+                                android:textSize="14dp"
+                                tools:ignore="TextSizeCheck" />
+
+                            <ProgressBar
+                                android:id="@+id/progressBar4"
+                                style="?android:attr/progressBarStyleHorizontal"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/lemak"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="10dp"
+                                android:fontFamily="@font/jost_medium"
+                                android:text="Lemak"
+                                android:textColor="@color/black"
+                                android:textSize="14dp" />
+
+
+                            <TextView
+                                android:id="@+id/lemakGram"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="10dp"
+                                android:fontFamily="@font/jost_medium"
+                                android:paddingBottom="5dp"
+                                android:text="kalori"
+                                android:textColor="@color/grey"
+                                android:textSize="14dp"
+                                tools:ignore="TextSizeCheck" />
+
+                            <ProgressBar
+                                android:id="@+id/progressBar5"
+                                style="?android:attr/progressBarStyleHorizontal"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="20dp"
+                        android:text="Bahan-bahan"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/detailDesc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="25dp"
+                        android:layout_marginVertical="5dp"
+                        android:text="@string/detailBubur"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="20dp"
+                        android:text="Cara membuat bubur ayam sederhana"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/detailDesc2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="25dp"
+                        android:layout_marginVertical="5dp"
+                        android:text="@string/detailBubur2"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</LinearLayout>

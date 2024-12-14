@@ -13,6 +13,12 @@
         android:theme="@style/Theme.TUBES"
         tools:targetApi="31">
         <activity
+            android:name=".detailResep"
+            android:exported="false" />
+        <activity
+            android:name=".desainResep"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

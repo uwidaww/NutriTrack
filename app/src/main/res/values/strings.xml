@@ -18,8 +18,35 @@
         <item>Bola Voli</item>
         <item>Bersepeda</item>
     </string-array>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="detailBubur">
+    <b> •</b> 1/2 kg beras (cuci hingga bersih).\n
+    <b>•</b> 2 gelas kaldu ayam.\n
+    <b>•</b> 2 gelas air biasa.\n
+    <b>•</b> Garam (secukupnya).\n
+    <b>•</b> 1/4 daging ayam (tanpa tulang).\n
+    <b>•</b> Bawang goreng (secukupnya).\n
+    <b>•</b> Kecap asin atau manis (secukupnya).\n
+    <b>•</b> 1 batang daun bawang (iris kecil).\n
+    <b>•</b> 1 batang daun seledri (iris kecil).\n
+    <b>•</b> 1 butir telur (rebus, kupas kulitnya, belah jadi dua).\n
+    <b>•</b> Kaldu ayam bubuk (jika suka, secukupnya).\n
+    <b>•</b> Sambal (bila suka)
+</string>
+
+    <string name="detailBubur2">
+        <b> 1.</b> Masak beras dengan air biasa dan air kaldu ayam.\n
+        <b>2.</b> Beri garam dan kaldu ayam secukupnya.\n
+        <b>3.</b> Masak beras hingga menjadi lumar dan lembut sampai matang, kira-kira selama setengah jam.\n
+        <b>4.</b> Agar panci tidak gosong, jangan lupa untuk mengaduk beras.\n
+        <b>5.</b> Jika sudah matang, sisihkan sebentar.\n
+        <b>6.</b> Selanjutnya, bumbui daging ayam dengan garam.\n
+        <b>7.</b> Goreng daging ayam sampai matang dan iris tipis.\n
+        <b>8.</b> Ambil mangkok lalu letakkan bubur ayam di atasnya.\n
+        <b>9.</b> Taburkan daging ayam goreng, bawang goreng, daun bawang, daun seledri, dan telur.\n
+        <b>10.</b> Tambahkan kecap asin atau kecap manis di atasnya.\n
+        <b>11.</b> Tambahkan pula sambal jika kamu suka.
+    </string>
 
 
 </resources>
