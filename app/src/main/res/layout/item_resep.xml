@@ -1,0 +1,43 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="8dp"
+    android:background="@drawable/gray"
+    android:layout_marginBottom="8dp">
+
+    <!-- Gambar Resep -->
+    <ImageView
+        android:id="@+id/imgResep"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bubur_ayam"
+        android:layout_marginEnd="8dp" />
+
+    <!-- Detail Resep -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtNamaResep"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Bubur Ayam"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/txtKalori"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Kalori: ± 250-350 kkal"
+            android:textSize="14sp"
+            />
+    </LinearLayout>
+</LinearLayout>

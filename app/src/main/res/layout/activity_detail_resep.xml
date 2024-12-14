@@ -1,0 +1,87 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Gambar Resep -->
+        <ImageView
+            android:id="@+id/imgDetailResep"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/bubur_ayam" />
+
+        <!-- Judul Resep -->
+        <TextView
+            android:id="@+id/txtJudulResep"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Bubur Ayam"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <!-- Informasi Kalori -->
+        <TextView
+            android:id="@+id/txtKaloriDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="350 kkal"
+            android:textSize="18sp"
+            android:textColor="@color/purple_500" />
+
+        <!-- Deskripsi Bahan -->
+        <TextView
+            android:id="@+id/txtBahan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Bahan-bahan:"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtDetailBahan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="1. 1/2 kg beras (cuci hingga bersih)\n2. 2 Gelas kaldu ayam
+\n3. 2 gelas air biasa
+\n4. Garam (secukupnya)
+\n5. 1/4 daging ayam (tanpa tulang)
+\n6. Bawang goreng (secukupnya)
+\n7. Kecap asin atau manis (secukupnya)
+\n8. 1 batang daun bawang (iris kecil)
+\n9. 1 batang daun seledri (iris kecil)
+\n10. 1 butir telur (rebus, kupas kulitnya belah jadi dua)
+\n11. Kaldu ayam bubuk (jika suka, secukupnya)
+\n12. Sambal (bila suka)" />
+
+        <!-- Deskripsi Cara Memasak -->
+        <TextView
+            android:id="@+id/txtCaraMemasak"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Cara membuat:"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtDetailCaraMemasak"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="1. Masak beras dengan air biasa dan air kaldu ayam. Beri garam dan kaldu ayam secukupnya.
+\n2. Masak beras hingga menjadi lumar dan lembut sampai matang kira-kira selama setengah jam. Agar panci buat memasak tidak gosong, jangan lupa untuk mengaduk beras. Jika sudah matang, sisihkan sebentar.
+\n3. Selanjutnya, bumbui daging ayam dengan garam lalu goreng sampai matang dan iris tipis.
+\n4. Ambil mangkok lalu letakkan bubur ayam di atasnya. Taburkan daging ayam goreng, bawang goreng, daun bawang, daun seledri dan telur.
+\n5. Tambahkan kecap asin atau kecap manis di atasnya. Tambahkan pula sambal jika kamu suka." />
+    </LinearLayout>
+</ScrollView>
