@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Tombol tambah pengingat -->
+    <ImageView
+        android:id="@+id/btnAddReminder"
+        android:layout_width="54dp"
+        android:layout_height="55dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/add" />
+
+    <!-- Judul "Pengingat" -->
+    <TextView
+        android:id="@+id/pgt"
+        android:layout_width="333dp"
+        android:layout_height="49dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_toStartOf="@id/btnAddReminder"
+        android:text="Pengingat"
+        android:textAlignment="center"
+        android:textSize="34sp" />
+
+    <!-- RecyclerView di bawah TextView -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewAlarms"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/pgt"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp" />
+
+</RelativeLayout>
