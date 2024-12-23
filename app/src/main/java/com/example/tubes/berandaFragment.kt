@@ -44,6 +44,12 @@ class berandaFragment : Fragment() {
             (activity as MainActivity).loadFragment(tampilanHidrasi())
         }
 
+        val rasio = view.findViewById<ImageButton>(R.id.rasio)
+        rasio.setOnClickListener {
+            // Load the tampilanHidrasi fragment
+            (activity as MainActivity).loadFragment(tampilanRasio())
+        }
+
         return view
     }
 

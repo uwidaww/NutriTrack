@@ -5,55 +5,47 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageButton
+import android.widget.TextView
+import androidx.core.content.ContextCompat
+import androidx.lifecycle.ViewModelProvider
+import com.mikhaellopez.circularprogressbar.CircularProgressBar
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [tampilanRasio.newInstance] factory method to
- * create an instance of this fragment.
- */
 class tampilanRasio : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
+    private lateinit var keluar: ImageButton
+    private lateinit var progressTextView: TextView // Reference to the TextView
+    private var currentProgress: Float = 0f
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_tampilan_rasio, container, false)
-    }
+        val view = inflater.inflate(R.layout.fragment_tampilan_rasio, container, false)
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment tampilanRasio.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            tampilanRasio().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
+        keluar = view.findViewById(R.id.buttonBack)
+        progressTextView = view.findViewById(R.id.kalori)
+        val circularProgressBar = view.findViewById<CircularProgressBar>(R.id.circularprogressrasio)
+
+        // Configure the CircularProgressBar
+        circularProgressBar.apply {
+            progressMax = 1500f
+            setProgressWithAnimation(700f, 1000) // Set initial progress to 700 with animation over 1 second
+            progressBarWidth = 5f // Set the width of the progress bar
+            backgroundProgressBarWidth = 7f // Set the width of the background progress bar
+            progressBarColor = ContextCompat.getColor(requireContext(), R.color.purple) // Use a color resource
+        }
+
+        keluar.setOnClickListener {
+            (activity as MainActivity).loadFragment(berandaFragment())
+        }
+
+        // Update the TextView to show the current progress
+        updateProgressText(700f)
+
+        return view
+    }
+    private fun updateProgressText(progress: Float) {
+        // Update the TextView to show the current progress
+        progressTextView.text = "Konsumsi\n${progress.toInt()} kalori"
     }
 }

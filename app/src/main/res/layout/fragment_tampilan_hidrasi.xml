@@ -81,56 +81,59 @@
             </FrameLayout>
 
 
-
             <HorizontalScrollView
                 android:id="@+id/mlMinum"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_margin="10dp">
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal">
 
                     <Button
                         android:id="@+id/button100ml"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="100ml"
-                        android:textColor="@color/purple_200"
+                        android:layout_marginEnd="5dp"
                         android:background="@drawable/btn_outline"
                         android:fontFamily="@font/jost_medium"
-                        android:textSize="20dp"
-                        android:layout_marginEnd="5dp" />
+                        android:text="100ml"
+                        android:textColor="@color/purple_200"
+                        android:textSize="20dp" />
+
                     <Button
                         android:id="@+id/button250ml"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="250ml"
-                        android:fontFamily="@font/jost_medium"
-                        android:textSize="20dp"
-                        android:textColor="@color/purple_200"
+                        android:layout_marginEnd="5dp"
                         android:background="@drawable/btn_outline"
-                        android:layout_marginEnd="5dp"/>
+                        android:fontFamily="@font/jost_medium"
+                        android:text="250ml"
+                        android:textColor="@color/purple_200"
+                        android:textSize="20dp" />
+
                     <Button
                         android:id="@+id/button500ml"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="500ml"
-                        android:fontFamily="@font/jost_medium"
-                        android:textSize="20dp"
-                        android:textColor="@color/purple_200"
+                        android:layout_marginEnd="5dp"
                         android:background="@drawable/btn_outline"
-                        android:layout_marginEnd="5dp"/>
+                        android:fontFamily="@font/jost_medium"
+                        android:text="500ml"
+                        android:textColor="@color/purple_200"
+                        android:textSize="20dp" />
+
                     <Button
                         android:id="@+id/button1l"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="1l"
-                        android:fontFamily="@font/jost_medium"
-                        android:textColor="@color/purple_200"
                         android:background="@drawable/btn_outline"
-                        android:textSize="20dp"/>
+                        android:fontFamily="@font/jost_medium"
+                        android:text="1l"
+                        android:textColor="@color/purple_200"
+                        android:textSize="20dp" />
                 </LinearLayout>
             </HorizontalScrollView>
 
@@ -161,64 +164,64 @@
             </LinearLayout>
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginHorizontal="20dp"
-            android:layout_marginTop="20dp">
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:layout_marginHorizontal="20dp"-->
+<!--            android:layout_marginTop="20dp">-->
 
-            <ImageButton
-                android:id="@+id/buttonBackTglAktivitas"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:backgroundTint="@color/white"
-                android:src="@drawable/back"/>
+<!--            <ImageButton-->
+<!--                android:id="@+id/buttonBackTglAktivitas"-->
+<!--                android:layout_width="50dp"-->
+<!--                android:layout_height="50dp"-->
+<!--                android:backgroundTint="@color/white"-->
+<!--                android:src="@drawable/back"/>-->
 
-            <TextView
-                android:id="@+id/tglPermingguAktivitas"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_gravity="center"
-                android:layout_marginStart="85dp"
-                android:fontFamily="@font/jost_medium"
-                android:text="Nov, 22 -28"
-                android:textColor="#000000"
-                android:textSize="20sp" />
+<!--            <TextView-->
+<!--                android:id="@+id/tglPermingguAktivitas"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight="1"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:layout_marginStart="85dp"-->
+<!--                android:fontFamily="@font/jost_medium"-->
+<!--                android:text="Nov, 22 -28"-->
+<!--                android:textColor="#000000"-->
+<!--                android:textSize="20sp" />-->
 
-            <ImageButton
-                android:id="@+id/buttonNextTglAktivitas"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:backgroundTint="@color/white"
-                android:src="@drawable/next"/>
-        </LinearLayout>
+<!--            <ImageButton-->
+<!--                android:id="@+id/buttonNextTglAktivitas"-->
+<!--                android:layout_width="50dp"-->
+<!--                android:layout_height="50dp"-->
+<!--                android:backgroundTint="@color/white"-->
+<!--                android:src="@drawable/next"/>-->
+<!--        </LinearLayout>-->
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="277dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_margin="20dp"
-            android:background="@drawable/profile_bg"
-            android:elevation="10dp"
-            android:orientation="vertical"
-            android:padding="15dp">
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="277dp"-->
+<!--            android:layout_gravity="center_horizontal"-->
+<!--            android:layout_margin="20dp"-->
+<!--            android:background="@drawable/profile_bg"-->
+<!--            android:elevation="10dp"-->
+<!--            android:orientation="vertical"-->
+<!--            android:padding="15dp">-->
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/jost_medium"
-                android:text="Minggu Ini"
-                android:textSize="18dp" />
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:fontFamily="@font/jost_medium"-->
+<!--                android:text="Minggu Ini"-->
+<!--                android:textSize="18dp" />-->
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/jost_medium"
-                android:text="Rata-rata...."
-                android:textSize="18dp" />
-        </LinearLayout>
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:fontFamily="@font/jost_medium"-->
+<!--                android:text="Rata-rata...."-->
+<!--                android:textSize="18dp" />-->
+<!--        </LinearLayout>-->
 
     </LinearLayout>
 
