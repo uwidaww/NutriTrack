@@ -60,45 +60,46 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:cornerRadius="8dp"
+                android:backgroundTint="@color/grey"
                 android:text="Sen"
-                android:backgroundTint="@color/gray" />
+                app:cornerRadius="8dp" />
+
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:cornerRadius="8dp"
+                android:backgroundTint="@color/grey"
                 android:text="Sel"
-                android:backgroundTint="@color/gray" />
+                app:cornerRadius="8dp" />
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:cornerRadius="8dp"
                 android:text="Rab"
-                android:backgroundTint="@color/gray" />
+                android:backgroundTint="@color/grey" />
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:cornerRadius="8dp"
                 android:text="Kam"
-                android:backgroundTint="@color/gray" />
+                android:backgroundTint="@color/grey" />
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:cornerRadius="8dp"
                 android:text="Jum"
-                android:backgroundTint="@color/gray" />
+                android:backgroundTint="@color/grey" />
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:cornerRadius="8dp"
                 android:text="Sab"
-                android:backgroundTint="@color/gray" />
+                android:backgroundTint="@color/grey" />
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:cornerRadius="8dp"
                 android:text="Min"
-                android:backgroundTint="@color/gray" />
+                android:backgroundTint="@color/grey" />
         </LinearLayout>
 
         <!-- Suara Dropdown -->

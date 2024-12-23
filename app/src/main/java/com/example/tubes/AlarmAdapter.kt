@@ -1,4 +1,4 @@
-package com.example.laststand
+package com.example.tubes
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
