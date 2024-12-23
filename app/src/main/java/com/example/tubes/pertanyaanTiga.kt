@@ -20,6 +20,7 @@ private lateinit var pekerjaan: RadioGroup
 private lateinit var selanjutnya: Button
 private lateinit var kembali: ImageButton
 
+
 class pertanyaanTiga : Fragment() {
 
     override fun onCreateView(
@@ -54,13 +55,43 @@ class pertanyaanTiga : Fragment() {
             val rbDurasiOlahraga = durasi.checkedRadioButtonId
             val rbAktivitasOlahraga = pekerjaan.checkedRadioButtonId
 
+
+            val aktifButtonText = when (olahraga.checkedRadioButtonId) {
+                R.id.rbKurang -> "Tidak aktif (kurang dari 2.000 langkah)"
+                R.id.rbCukup -> "Cukup aktif (2.000–5.000 langkah)"
+                else -> "Sangat aktif (lebih dari 5.000 langkah)"
+            }
+
+            val durasiButtonText = when (durasi.checkedRadioButtonId) {
+
+                R.id.rbKurangDurasi -> "Kurang dari 30 menit"
+                R.id.rbCukupDurasi -> "30–60 menit"
+                else -> "Lebih dari 60 menit"
+            }
+
+            val waktuButtonText = when (aktivitas.checkedRadioButtonId){
+
+                R.id.rbTidakPernah -> "Tidak Pernah"
+                R.id.rbSekali -> "1-2 kali"
+                R.id.rbTigakali -> "3-4 kali"
+                else -> "5 kali atau lebih"
+
+            }
+
             when {
                 rbAktifOlahraga == -1 || rbWaktuOlahraga == -1 || rbDurasiOlahraga == 1 || rbAktivitasOlahraga == 1 -> {
                     Toast.makeText(requireContext(), "Isi semua detail", Toast.LENGTH_SHORT).show()
                 }
 
                 else -> {
-                    (activity as MainActivity).loadFragment(pertanyaanTiga())
+<<<<<<< HEAD
+                    var Data = promptData()
+                    Data.setAktivitasHarian(aktifButtonText)
+                    Data.setBanyakOlahraga(waktuButtonText)
+                    Data.setDurasiOlahraga(durasiButtonText)
+=======
+>>>>>>> e45f3ac069c493400b412bad687471cdb7182e4c
+                    (activity as MainActivity).loadFragment(pertanyaanEmpat())
                 }
             }
         }

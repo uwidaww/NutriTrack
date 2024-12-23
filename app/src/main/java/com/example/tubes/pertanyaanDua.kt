@@ -17,6 +17,7 @@ private lateinit var selanjutnya: Button
 private lateinit var kembali: ImageButton
 
 
+
 class pertanyaanDua : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -36,12 +37,20 @@ class pertanyaanDua : Fragment() {
             val rbGroupSulitMinum = kesulitan.checkedRadioButtonId
             val rbGroupReminderMinum = pengingat.checkedRadioButtonId
 
+            val airButtonText = when (minum.checkedRadioButtonId) {
+                R.id.rbKurang -> "Kurang dari 500ml"
+                R.id.rbCukup -> "500ml sampai 1000ml"
+                else -> "Lebih dari 1000ml"
+            }
+
             when {
                 rbGroupBanyakMinum == -1 || rbGroupSulitMinum == -1 || rbGroupReminderMinum == 1 -> {
                     Toast.makeText(requireContext(), "Isi semua detail", Toast.LENGTH_SHORT).show()
                 }
 
                 else -> {
+                    var Data = promptData()
+                    Data.setAir(airButtonText)
                     (activity as MainActivity).loadFragment(pertanyaanTiga())
                 }
             }

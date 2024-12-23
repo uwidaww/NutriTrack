@@ -28,6 +28,7 @@ class pertanyaanSatu : Fragment(), DatePickerDialog.OnDateSetListener {
     private lateinit var selanjutnya: Button
     private lateinit var kembali: ImageButton
     private lateinit var teksTanggal: TextView
+    var Data = promptData()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -48,10 +49,20 @@ class pertanyaanSatu : Fragment(), DatePickerDialog.OnDateSetListener {
         selanjutnya.setOnClickListener {
             val namaCol = namaLengkap.text.toString()
             val tbCol = tinggiBadan.text.toString()
+            val teksTanggals = teksTanggal.text.toString()
             val bbCol = beratBadan.text.toString()
             val rbGroupGender = gender.checkedRadioButtonId
             val rbGroupTujuan = tujuan.checkedRadioButtonId
+            val radioButtonText = when (gender.checkedRadioButtonId) {
+                R.id.rbLaki -> "Laki - Laki"
+                else -> "Perempuan"
+            }
+            val tujuanButtonText = when (tujuan.checkedRadioButtonId) {
 
+                R.id.rbTurun -> "Menurunkan berat badan"
+                R.id.rbMenjaga -> "Menjaga berat badan"
+                else -> "Menaikkan berat badan"
+            }
             when {
                 namaCol.isEmpty() || tbCol.isEmpty() || bbCol.isEmpty() -> {
                     Toast.makeText(requireContext(), "Isi semua detail", Toast.LENGTH_SHORT).show()
@@ -63,6 +74,12 @@ class pertanyaanSatu : Fragment(), DatePickerDialog.OnDateSetListener {
                 rbGroupTujuan == -1 -> {
                     Toast.makeText(requireContext(), "Pilih tujuan Anda", Toast.LENGTH_SHORT).show()
                 }else -> {
+
+                    Data.setTujuan(tujuanButtonText)
+                    Data.setKelamin(radioButtonText)
+                    Data.setTinggiBadan(tbCol)
+                    Data.setBeratBadan(bbCol)
+                    Data.setTglLahir(teksTanggals)
                     (activity as MainActivity).loadFragment(pertanyaanDua())
                 }
             }

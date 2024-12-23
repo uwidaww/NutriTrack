@@ -1,21 +1,26 @@
 package com.example.tubes
 
-import android.content.Intent
 import android.os.Bundle
-import androidx.fragment.app.Fragment
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
+import androidx.fragment.app.Fragment
+import com.google.android.gms.tasks.OnCompleteListener
+import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.QuerySnapshot
+import java.lang.Integer.getInteger
+
 
 class signUp : Fragment() {
     private lateinit var namaPengguna: TextView
     private lateinit var kataSandi: TextView
     private lateinit var konfirKataSandi: TextView
     private lateinit var linkMasuk: TextView
-    private lateinit var daftar: Button
+    private lateinit var bdaftar: Button
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -29,13 +34,15 @@ class signUp : Fragment() {
         kataSandi = view.findViewById(R.id.passSignUp)
         konfirKataSandi = view.findViewById(R.id.konfirPassSignUp)
         linkMasuk = view.findViewById(R.id.masuk)
-        daftar = view.findViewById(R.id.buttonDaftar)
+        bdaftar = view.findViewById(R.id.buttonDaftar)
 
         // Set click listeners
-        daftar.setOnClickListener {
+        bdaftar.setOnClickListener {
             val username = namaPengguna.text.toString()
             val password = kataSandi.text.toString()
             val konifrPass = konfirKataSandi.text.toString()
+
+
 
             when {
                 username.isEmpty() || password.isEmpty() || konifrPass.isEmpty() -> {
@@ -47,8 +54,51 @@ class signUp : Fragment() {
                     .show()
                 } else -> {
 
-                Toast.makeText(requireContext(), "Berhasil daftar", Toast.LENGTH_SHORT).show()
-                (activity as MainActivity).loadFragment(signIn())
+
+                val firestoreDatabasea = FirebaseFirestore.getInstance()
+                var count : String = ""
+
+                val saaa = firestoreDatabasea.collection("user").get().result.isEmpty
+
+
+
+
+
+
+                    var newUser :MutableMap<String,Any> = HashMap()
+                    newUser["ID"] = count
+                    newUser["name"] = username
+                    newUser["pass"] = password
+                    newUser["gender"] = ""
+                    newUser["BB"] = ""
+                    newUser["TB"] = ""
+
+                    val upCount:MutableMap<String,Any> = HashMap()
+                    upCount["IDavailable"] = getInteger(count) + 1
+
+                firestoreDatabasea.collection("user")
+                    .add(newUser)
+                    .addOnCompleteListener{
+                        if (it.isSuccessful){
+                            Toast.makeText(requireContext(), "Berhasil daftar", Toast.LENGTH_SHORT).show()
+                            (activity as MainActivity).loadFragment(signIn())
+                        }
+
+                    }
+
+                firestoreDatabasea.collection("user")
+                    .get()
+                    .addOnCompleteListener{
+                        if (it.isSuccessful){
+                            for(doc in it.result){
+                                firestoreDatabasea.collection("user")
+                                    .document("IDCounter")
+                                    .set(upCount)
+                                break
+                            }
+                        }
+                    }
+
             }
             }
         }

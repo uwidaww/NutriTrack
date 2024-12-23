@@ -17,7 +17,7 @@ class signIn : Fragment() {
     private lateinit var kataSandi: TextView
     private lateinit var linkDaftar: TextView
     private lateinit var login: Button
-    val firestoreDatabase = FirebaseFirestore.getInstance()
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -40,11 +40,11 @@ class signIn : Fragment() {
             if (username.isEmpty() || password.isEmpty()) {
                 Toast.makeText(requireContext(), "Isi semua detail", Toast.LENGTH_SHORT).show()
             } else {
+                var firestoreDatabase = FirebaseFirestore.getInstance()
                 firestoreDatabase.collection("user")
                     .get()
                     .addOnCompleteListener {
-                        val resus = ""
-                        val respass = ""
+
                         if (it.isSuccessful){
                             for(doc in it.result) {
                                 val resus = doc.get("name")
@@ -53,6 +53,7 @@ class signIn : Fragment() {
                                 if (resus == username && respass == password){
                                     Toast.makeText(requireContext(), "Berhasil masuk", Toast.LENGTH_SHORT).show()
                                     (activity as MainActivity).loadFragment(introductionApp())
+                                    firestoreDatabase.disableNetwork()
                                     break
                                 }
                             }
