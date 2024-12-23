@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
         bottomNavigationView = findViewById(R.id.bottomNavigation)
 
         // Load the SignIn fragment first
-        loadFragment(berandaFragment())
+        loadFragment(signIn())
 
         // Set up the bottom navigation listener
         bottomNavigationView.setOnItemSelectedListener { item ->
