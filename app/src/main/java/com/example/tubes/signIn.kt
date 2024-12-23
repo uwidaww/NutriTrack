@@ -2,6 +2,7 @@ package com.example.tubes
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -9,12 +10,14 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
+import com.google.firebase.firestore.FirebaseFirestore
 
 class signIn : Fragment() {
     private lateinit var namaPengguna: TextView
     private lateinit var kataSandi: TextView
     private lateinit var linkDaftar: TextView
     private lateinit var login: Button
+    val firestoreDatabase = FirebaseFirestore.getInstance()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -37,8 +40,26 @@ class signIn : Fragment() {
             if (username.isEmpty() || password.isEmpty()) {
                 Toast.makeText(requireContext(), "Isi semua detail", Toast.LENGTH_SHORT).show()
             } else {
-                Toast.makeText(requireContext(), "Berhasil masuk", Toast.LENGTH_SHORT).show()
-                (activity as MainActivity).loadFragment(introductionApp())
+                firestoreDatabase.collection("user")
+                    .get()
+                    .addOnCompleteListener {
+                        val resus = ""
+                        val respass = ""
+                        if (it.isSuccessful){
+                            for(doc in it.result) {
+                                val resus = doc.get("name")
+                                val respass = doc.get("pass")
+
+                                if (resus == username && respass == password){
+                                    Toast.makeText(requireContext(), "Berhasil masuk", Toast.LENGTH_SHORT).show()
+                                    (activity as MainActivity).loadFragment(introductionApp())
+                                    break
+                                }
+                            }
+                        }
+                    }
+
+
             }
         }
 

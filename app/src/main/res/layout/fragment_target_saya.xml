@@ -90,7 +90,7 @@
                 android:layout_gravity="center_horizontal"
                 android:fontFamily="@font/jost_medium"
                 android:text="Atur Ulang"
-                android:textColor="@color/purple"
+                android:textColor="@color/purple_700"
                 android:background="@drawable/btn_outline"
                 android:layout_margin="20dp"/>
 

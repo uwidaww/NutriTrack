@@ -46,6 +46,7 @@ class signUp : Fragment() {
                 Toast.makeText(requireContext(), "Kata sandi tidak cocok", Toast.LENGTH_SHORT)
                     .show()
                 } else -> {
+
                 Toast.makeText(requireContext(), "Berhasil daftar", Toast.LENGTH_SHORT).show()
                 (activity as MainActivity).loadFragment(signIn())
             }
