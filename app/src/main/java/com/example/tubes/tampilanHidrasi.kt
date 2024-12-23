@@ -2,13 +2,14 @@ package com.example.tubes
 
 import android.os.Bundle
 import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageButton
+import android.widget.TextView
 import androidx.core.content.ContextCompat
+import androidx.fragment.app.Fragment
 import com.mikhaellopez.circularprogressbar.CircularProgressBar
 import com.example.tubes.R
 
@@ -16,6 +17,7 @@ class tampilanHidrasi : Fragment() {
     private lateinit var keluar: ImageButton
     private lateinit var resetButton: ImageButton
     private lateinit var doneButton: ImageButton
+    private lateinit var progressTextView: TextView // Reference to the TextView
     private var currentProgress: Float = 0f // Track current progress
     private var isDone: Boolean = false // Track if the progress is done
 
@@ -28,6 +30,7 @@ class tampilanHidrasi : Fragment() {
         keluar = view.findViewById(R.id.buttonBack)
         resetButton = view.findViewById(R.id.reset)
         doneButton = view.findViewById(R.id.button_done)
+        progressTextView = view.findViewById(R.id.progres) // Initialize the TextView
 
         val circularProgressBar = view.findViewById<CircularProgressBar>(R.id.circularprogressHidrasi)
 
@@ -83,12 +86,18 @@ class tampilanHidrasi : Fragment() {
         Log.d("tampilanHidrasi", "Current Progress: $currentProgress")
         // Update the CircularProgressBar with animation
         circularProgressBar.setProgressWithAnimation(currentProgress, 1000)
+
+        // Update the TextView to show the current progress on a new line
+        progressTextView.text = "Konsumsi\n${currentProgress.toInt()} ml"
     }
 
     private fun resetProgress(circularProgressBar: CircularProgressBar) {
         currentProgress = 0f // Reset progress
         isDone = false // Allow updates again
         circularProgressBar.setProgressWithAnimation(currentProgress, 1000) // Reset the CircularProgressBar
+
+        // Update the TextView to show the reset progress
+        progressTextView.text = "Konsumsi\n${currentProgress.toInt()} ml"
         Log.d("tampilanHidrasi", "Progress reset to: $currentProgress")
     }
 }

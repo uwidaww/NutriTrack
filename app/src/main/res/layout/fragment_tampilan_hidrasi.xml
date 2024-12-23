@@ -55,13 +55,32 @@
                 android:text="Hari Ini"
                 android:textSize="18dp" />
 
-            <com.mikhaellopez.circularprogressbar.CircularProgressBar
-                android:id="@+id/circularprogressHidrasi"
-                app:cpb_background_progressbar_color="#E8DEF8"
-                android:layout_width="130dp"
-                android:layout_height="130dp"
-                android:textAlignment="center"
-                android:layout_gravity="center" />
+            <FrameLayout
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center_horizontal">
+
+                <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                    android:id="@+id/circularprogressHidrasi"
+                    app:cpb_background_progressbar_color="#E8DEF8"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:textAlignment="center"
+                    android:layout_gravity="center" />
+
+                <TextView
+                    android:id="@+id/progres"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Konsumsi"
+                    android:layout_gravity="center"
+                    android:padding="8dp"
+                    android:textSize="16sp"
+                    android:lineSpacingExtra="4dp"
+                    android:gravity="center" />
+            </FrameLayout>
+
+
 
             <HorizontalScrollView
                 android:id="@+id/mlMinum"

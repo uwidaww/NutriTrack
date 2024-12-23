@@ -99,13 +99,16 @@
                         android:textAlignment="center"
                         android:layout_gravity="center" />
 
-<!--                    <TextView-->
-<!--                        android:id="@+id/kalori"-->
-<!--                        android:layout_width="wrap_content"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:text="Konsumsi"-->
-<!--                        android:layout_gravity="center"-->
-<!--                        android:textSize="20sp"/>-->
+                    <TextView
+                        android:id="@+id/kalori"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Konsumsi"
+                        android:layout_gravity="center"
+                        android:padding="8dp"
+                        android:textSize="16sp"
+                        android:lineSpacingExtra="4dp"
+                        android:gravity="center" />
                 </FrameLayout>
 
 

@@ -41,10 +41,10 @@ class MainActivity : AppCompatActivity() {
                     loadFragment(resepFragment())
                     true
                 }
-//                R.id.navAlarm -> {
-//                    loadFragment(berandaFragment())
-//                    true
-//                }
+                R.id.navAlarm -> {
+                    loadFragment(berandaFragment())
+                    true
+                }
                 R.id.navPengaturan -> {
                     loadFragment(settingsFragment())
                     true
