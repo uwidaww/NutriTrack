@@ -110,7 +110,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/jost_medium"
                         android:text="Protein"
-                        android:textColor="@color/grey"
+                        android:textColor="@color/gray"
                         android:textSize="14dp" />
 
                     <ProgressBar
@@ -126,7 +126,7 @@
                         android:fontFamily="@font/jost_medium"
                         android:paddingBottom="5dp"
                         android:text="Protein"
-                        android:textColor="@color/grey"
+                        android:textColor="@color/gray"
                         android:textSize="14dp"
                         tools:ignore="TextSizeCheck" />
                 </LinearLayout>
@@ -142,7 +142,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/jost_medium"
                         android:text="Karbo"
-                        android:textColor="@color/grey"
+                        android:textColor="@color/gray"
                         android:textSize="14dp" />
 
                     <ProgressBar
@@ -158,7 +158,7 @@
                         android:fontFamily="@font/jost_medium"
                         android:paddingBottom="5dp"
                         android:text="Protein"
-                        android:textColor="@color/grey"
+                        android:textColor="@color/gray"
                         android:textSize="14dp"
                         tools:ignore="TextSizeCheck" />
                 </LinearLayout>
@@ -174,7 +174,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/jost_medium"
                         android:text="Lemak"
-                        android:textColor="@color/grey"
+                        android:textColor="@color/gray"
                         android:textSize="14dp" />
 
                     <ProgressBar
@@ -190,7 +190,7 @@
                         android:fontFamily="@font/jost_medium"
                         android:paddingBottom="5dp"
                         android:text="Protein"
-                        android:textColor="@color/grey"
+                        android:textColor="@color/gray"
                         android:textSize="14dp"
                         tools:ignore="TextSizeCheck" />
                 </LinearLayout>
@@ -207,7 +207,7 @@
             android:fontFamily="@font/poppins"
 
             android:text="Motivasi Hari Ini"
-            android:textColor="@color/grey"
+            android:textColor="@color/gray"
             android:textSize="20dp" />
 
         <TextView
@@ -278,7 +278,7 @@
                     android:layout_marginTop="95dp"
                     android:fontFamily="@font/poppins_medium"
                     android:text="Rasio"
-                    android:textColor="@color/grey"
+                    android:textColor="@color/gray"
                     android:textSize="15dp"
                     tools:ignore="TextSizeCheck" />
             </androidx.cardview.widget.CardView>

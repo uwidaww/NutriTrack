@@ -86,7 +86,7 @@
                 android:layout_gravity="center"
                 android:fontFamily="@font/jost_medium"
                 android:text="Kembali"
-                android:textColor="@color/purple"
+                android:textColor="@color/purple_700"
                 android:background="@drawable/btn_outline"
                 android:layout_marginEnd="20dp"/>
 

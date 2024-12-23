@@ -41,7 +41,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Sarapan"
-                android:textColor="@color/purple"
+                android:textColor="@color/purple_200"
                 android:background="@drawable/btn_outline"
                 android:fontFamily="@font/jost_medium"
                 android:textSize="20dp"
@@ -52,7 +52,7 @@
                 android:text="Makan Siang"
                 android:fontFamily="@font/jost_medium"
                 android:textSize="20dp"
-                android:textColor="@color/purple"
+                android:textColor="@color/purple_200"
                 android:background="@drawable/btn_outline"
                 android:layout_marginEnd="10dp"/>
             <Button
@@ -61,7 +61,7 @@
                 android:text="Makan Malam"
                 android:fontFamily="@font/jost_medium"
                 android:textSize="20dp"
-                android:textColor="@color/purple"
+                android:textColor="@color/purple_200"
                 android:background="@drawable/btn_outline"
                 android:layout_marginEnd="10dp"/>
             <Button
@@ -69,7 +69,7 @@
                 android:layout_height="wrap_content"
                 android:text="Cemilan"
                 android:fontFamily="@font/jost_medium"
-                android:textColor="@color/purple"
+                android:textColor="@color/purple_200"
                 android:background="@drawable/btn_outline"
                 android:textSize="20dp"/>
         </LinearLayout>

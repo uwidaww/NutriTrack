@@ -77,7 +77,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="100ml"
-                        android:textColor="@color/purple"
+                        android:textColor="@color/purple_200"
                         android:background="@drawable/btn_outline"
                         android:fontFamily="@font/jost_medium"
                         android:textSize="20dp"
@@ -88,7 +88,7 @@
                         android:text="250ml"
                         android:fontFamily="@font/jost_medium"
                         android:textSize="20dp"
-                        android:textColor="@color/purple"
+                        android:textColor="@color/purple_200"
                         android:background="@drawable/btn_outline"
                         android:layout_marginEnd="5dp"/>
                     <Button
@@ -97,7 +97,7 @@
                         android:text="500ml"
                         android:fontFamily="@font/jost_medium"
                         android:textSize="20dp"
-                        android:textColor="@color/purple"
+                        android:textColor="@color/purple_200"
                         android:background="@drawable/btn_outline"
                         android:layout_marginEnd="5dp"/>
                     <Button
@@ -105,7 +105,7 @@
                         android:layout_height="wrap_content"
                         android:text="1l"
                         android:fontFamily="@font/jost_medium"
-                        android:textColor="@color/purple"
+                        android:textColor="@color/purple_200"
                         android:background="@drawable/btn_outline"
                         android:textSize="20dp"/>
                 </LinearLayout>

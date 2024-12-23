@@ -51,7 +51,7 @@
                 android:layout_weight="1"
                 android:indeterminate="false"
                 android:progress="25"
-                android:progressTint="@color/purple"/>
+                android:progressTint="@color/purple_200"/>
 
             <TextView
                 android:id="@+id/namaPenggunaProfil"
