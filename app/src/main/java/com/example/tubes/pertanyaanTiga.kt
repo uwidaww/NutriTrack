@@ -60,7 +60,7 @@ class pertanyaanTiga : Fragment() {
                 }
 
                 else -> {
-                    (activity as MainActivity).loadFragment(pertanyaanTiga())
+                    (activity as MainActivity).loadFragment(pertanyaanEmpat())
                 }
             }
         }

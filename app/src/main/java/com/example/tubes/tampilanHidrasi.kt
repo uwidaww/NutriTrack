@@ -1,59 +1,94 @@
 package com.example.tubes
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.ImageButton
+import androidx.core.content.ContextCompat
+import com.mikhaellopez.circularprogressbar.CircularProgressBar
+import com.example.tubes.R
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [tampilanHidrasi.newInstance] factory method to
- * create an instance of this fragment.
- */
 class tampilanHidrasi : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
+    private lateinit var keluar: ImageButton
+    private lateinit var resetButton: ImageButton
+    private lateinit var doneButton: ImageButton
+    private var currentProgress: Float = 0f // Track current progress
+    private var isDone: Boolean = false // Track if the progress is done
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_tampilan_hidrasi, container, false)
+        val view = inflater.inflate(R.layout.fragment_tampilan_hidrasi, container, false)
+
+        keluar = view.findViewById(R.id.buttonBack)
+        resetButton = view.findViewById(R.id.reset)
+        doneButton = view.findViewById(R.id.button_done)
+
+        val circularProgressBar = view.findViewById<CircularProgressBar>(R.id.circularprogressHidrasi)
+
+        // Configure the CircularProgressBar
+        circularProgressBar.apply {
+            progressMax = 1000f
+            setProgressWithAnimation(currentProgress, 1000) // Set initial progress
+            progressBarWidth = 5f
+            backgroundProgressBarWidth = 7f
+            progressBarColor = ContextCompat.getColor(requireContext(), R.color.purple)
+        }
+
+        // Set up button click listeners
+        view.findViewById<Button>(R.id.button100ml).setOnClickListener {
+            updateProgress(100f, circularProgressBar)
+        }
+        view.findViewById<Button>(R.id.button250ml).setOnClickListener {
+            updateProgress(250f, circularProgressBar)
+        }
+        view.findViewById<Button>(R.id.button500ml).setOnClickListener {
+            updateProgress(500f, circularProgressBar)
+        }
+        view.findViewById<Button>(R.id.button1l).setOnClickListener {
+            updateProgress(1000f, circularProgressBar)
+        }
+
+        keluar.setOnClickListener {
+            (activity as MainActivity).loadFragment(berandaFragment())
+        }
+
+        // Reset button click listener
+        resetButton.setOnClickListener {
+            resetProgress(circularProgressBar)
+        }
+
+        // Done button click listener
+        doneButton.setOnClickListener {
+            isDone = true // Mark progress as done
+        }
+
+        return view
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment tampilanHidrasi.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            tampilanHidrasi().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
+    private fun updateProgress(amount: Float, circularProgressBar: CircularProgressBar) {
+        if (isDone) return // Prevent updates if done
+
+        // Update the current progress
+        currentProgress += amount
+        if (currentProgress > 1000f) {
+            currentProgress = 1000f // Cap the progress at 1000
+        }
+        // Log the current progress for debugging
+        Log.d("tampilanHidrasi", "Current Progress: $currentProgress")
+        // Update the CircularProgressBar with animation
+        circularProgressBar.setProgressWithAnimation(currentProgress, 1000)
+    }
+
+    private fun resetProgress(circularProgressBar: CircularProgressBar) {
+        currentProgress = 0f // Reset progress
+        isDone = false // Allow updates again
+        circularProgressBar.setProgressWithAnimation(currentProgress, 1000) // Reset the CircularProgressBar
+        Log.d("tampilanHidrasi", "Progress reset to: $currentProgress")
     }
 }
