@@ -85,10 +85,13 @@ class pertanyaanTiga : Fragment() {
 
                 else -> {
 <<<<<<< HEAD
+<<<<<<< HEAD
                     var Data = promptData()
                     Data.setAktivitasHarian(aktifButtonText)
                     Data.setBanyakOlahraga(waktuButtonText)
                     Data.setDurasiOlahraga(durasiButtonText)
+=======
+>>>>>>> e45f3ac069c493400b412bad687471cdb7182e4c
 =======
 >>>>>>> e45f3ac069c493400b412bad687471cdb7182e4c
                     (activity as MainActivity).loadFragment(pertanyaanEmpat())
